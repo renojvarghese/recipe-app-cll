@@ -2,4 +2,6 @@ A collaborative project made by the Codecademy Lifelong Learners. This recipe ap
 
 Authors:
 Renoj Varghese
+Justin C
+Tom Raley
 Andre Pato
