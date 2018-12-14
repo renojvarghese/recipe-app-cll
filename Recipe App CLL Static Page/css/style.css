@@ -1,0 +1,452 @@
+/* Universal Styles */
+
+html {
+    font-family: 'Josefin Sans', 'Playfair Display', sans-serif, serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+}
+
+/*Start Landing Page*/
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%;
+    background-image: url('../img/landing-page.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    padding-top: 200px;
+    padding-bottom: 10px;
+}
+
+.left span {
+    margin: auto;
+    width: 70%;
+    padding-bottom: 400px;
+    font-size: 20px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100vh;
+    background: #FEDDCC;
+    text-align: center;
+    width: 100%;
+}
+
+.right form {
+    width: 100%;
+}
+
+.password {
+    padding-bottom: 20px;
+}
+
+.right a {
+    text-decoration: none;
+    color: #B22230;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.right a:hover {
+    color: #F8605c;
+}
+
+.email input {
+    padding: 8px 25px 8px 25px;
+    margin: 10px;
+    width: 50%;
+}
+
+.password input {
+    padding: 8px 25px 8px 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    border-radius: 2px none;
+}
+
+.signin-btn {
+    padding: 5px 60px;
+    margin-bottom: 20px;
+    background-color: #B22230;
+    color: white;
+    border-color: #B22230;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.signin-btn:hover {
+    background-color: #F8605c;
+    border-color: #F8605c;
+    transition: background-color 0.5s;
+}
+
+.links {
+    padding-top: 20px;
+    border-top: 3px solid #F8605c;
+    width: 100%;
+    text-align: center;
+}
+
+.links a {
+    color: #B22230;
+}
+
+.links a:hover {
+    color: #F8605c;
+}
+
+footer {
+    position: relative;
+}
+
+/*end landing page*/
+/*Create Account*/
+
+#container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FEDDCC;
+}
+
+.form2 h3 {
+    padding-bottom: 40px;
+}
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+.form2 {
+    width: 80%;
+}
+
+.form2 label {
+    width: 100%;
+}
+
+.user input {
+    padding: 8px 25px 8px 25px;
+    margin: 10px;
+    width: auto;
+}
+
+.email2 input {
+    padding: 8px 25px 8px 25px;
+    margin: 10px;
+    width: auto;
+}
+
+.password2 input {
+    padding: 8px 25px 8px 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: auto;
+    border-radius: 2px none;
+}
+
+#container2 footer {
+    margin-top: 20px;
+}
+
+.create-btn {
+    padding: 5px 60px;
+    margin-bottom: 20px;
+    background-color: #B22230;
+    color: white;
+    border-color: #B22230;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.create-btn:hover {
+    background-color: #F8605c;
+    border-color: #F8605c;
+    transition: background-color 0.5s;
+}
+
+
+/*start dashboard*/
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(248, 96, 92);
+    transition: all 0.2s ease-in-out;
+    z-index: 13;
+}
+
+.nav-bar.active {
+    background-color: rgba(248, 96, 92, 0.6);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.nav h2 {
+    color: white;
+}
+
+.menu {
+    margin-left: 10px;
+    align-self: flex-start;
+    flex: 1;
+    justify-self: center;
+    color: white;
+}
+
+.toggle-button {
+    position: fixed;
+    width: 44px;
+    height: 40px;
+    margin-left: 20px;
+    transition: .25s;
+    z-index: 15;
+    transform: translate(-22px, -20px);
+    transition: .25s;
+}
+
+.toggle-button:hover {
+    cursor: pointer;
+}
+
+.toggle-button .menu-bar {
+    position: absolute;
+    border-radius: 2px;
+    width: 80%;
+    transition: .5s;
+}
+
+.toggle-button .menu-bar-top {
+    border: 4px solid white;
+    border-bottom: none;
+    top: 0;
+}
+
+.toggle-button .menu-bar-middle {
+    height: 4px;
+    background-color: white;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    top: 4px;
+}
+
+.toggle-button .menu-bar-bottom {
+    border: 4px solid white;
+    border-top: none;
+    top: 22px;
+}
+
+.button-open .menu-bar-top {
+    transform: rotate(45deg) translate(8px, 8px);
+    transition: .5s;
+}
+
+.button-open .menu-bar-middle {
+    transform: translate(230px);
+    transition: .1s ease-in;
+    opacity: 0;
+}
+
+.button-open .menu-bar-bottom {
+    transform: rotate(-45deg) translate(8px, -7px);
+    transition: .5s;
+}
+
+.menu-wrap {
+    background-color: #8DA05E;
+    position: fixed;
+    top: 0;
+    margin-top: 80px;
+    height: 100%;
+    width: 280px;
+    margin-left: -280px;
+    font-size: 24px;
+    font-weight: 700;
+    overflow: auto;
+    transition: .25s;
+    z-index: 10;
+    text-align: center;
+}
+
+.menu-show {
+    margin-left: 0;
+    box-shadow: 4px 2px 15px 1px #B9ADAD;
+}
+
+.menu-sidebar li {
+    padding: 30px;
+    border-bottom: 4px solid #B22230;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu-sidebar a {
+    text-decoration: none;
+    color: white;
+    padding-right: 45px;
+
+
+}
+
+.menu-sidebar li:hover {
+    color: #F8605c;
+    transform: rotate(8deg) scale(1);
+    transition: all 0.2s
+}
+
+
+.add {
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    background-color: #B22230;
+    border: 2px solid #B22230;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.add:hover {
+    background-color: #F8605c;
+    transition: background-color 0.5s;
+}
+
+
+main {
+    background-color: #FEDDCC;
+    height: auto;
+    padding-top: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+.slide-container {
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+}
+
+.carousel-slide,
+.carousel-inner,
+.carousel-control {
+    height: 400px;
+    width: 800px;
+}
+
+section {
+    height: 100vh;
+}
+
+.search {
+    margin-top: -300px;
+}
+
+.search label {
+    padding: 5px;
+}
+
+.search input {
+    padding: 5px;
+}
+
+.srch-btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    background-color: #B22230;
+    border: 2px solid #B22230;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.srch-btn:hover {
+    background-color: #F8605c;
+    transition: background-color 0.5s;
+}
+
+
+
+
+
+/*end dashboard*/
+
+
+/*Homepage Media Queries*/
+@media(max-width: 768px) {
+    .right {
+        flex: 4;
+    }
+
+    .left {
+        display: none;
+    }
+}
+
+@media(max-width: 1024px) {
+    .left {
+        display: none;
+        ;
+    }
+
+    .right {
+        flex: 4;
+    }
+}
+
+/*End Homepage Media Queries*/
+
+
+/*Create Account Media Queries*/
+
+/*End Create account queries*/
+
+
+/*DashBoard Media Queries*/
+
+/*End Dashboard Media queries*/
