@@ -87,7 +87,7 @@ h1 {
     margin-top: 10px;
     margin-bottom: 20px;
     width: 50%;
-    border-radius: 2px none;
+    border-radius: 2px;
 }
 
 .signin-btn {
@@ -149,9 +149,6 @@ footer {
     justify-content: center;
     margin: auto;
     text-align: center;
-}
-
-.form2 {
     width: 80%;
 }
 
@@ -176,14 +173,14 @@ footer {
     margin-top: 10px;
     margin-bottom: 20px;
     width: auto;
-    border-radius: 2px none;
+    border-radius: 2px;
 }
 
 #container2 footer {
     margin-top: 20px;
 }
 
-.create-btn {
+.add {
     padding: 5px 60px;
     margin-bottom: 20px;
     background-color: #B22230;
@@ -194,9 +191,9 @@ footer {
     transition: all 0.5s;
 }
 
-.create-btn:hover {
+.add:hover {
     background-color: #F8605c;
-    border-color: #F8605c;
+    border-color: #B22230;
     transition: background-color 0.5s;
 }
 
@@ -331,6 +328,12 @@ footer {
 
 }
 
+.menu-sidebar a:hover {
+    text-decoration: none;
+    color: #F8605c;
+    padding-right: 45px;
+}
+
 .menu-sidebar li:hover {
     color: #F8605c;
     transform: rotate(8deg) scale(1);
@@ -370,7 +373,7 @@ main {
 }
 
 .sldie-container.hidden {
-    
+
     display: none;
 }
 
@@ -456,6 +459,30 @@ section {
 
 /*end dashboard*/
 
+/*Add Recipe*/
+.add-recipe {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.save-btn {
+    background-color: #B22230;
+    color: #fff;
+    border: 2px solid #B22230;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.2s;
+}
+
+.save-btn:hover {
+    background-color: #F8605c;
+}
+
+/*End add recipe*/
 
 /*Homepage Media Queries*/
 @media(max-width: 768px) {

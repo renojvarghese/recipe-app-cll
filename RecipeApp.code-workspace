@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "Recipe App CLL Static Page"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+		"editor.fontSize": 14,
+		"editor.fontWeight": "400"
+	}
+}
