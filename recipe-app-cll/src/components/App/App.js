@@ -11,6 +11,8 @@ import {
   ListGroupItemText
 } from "reactstrap";
 
+import AppRouter from "../AppRouter";
+
 class App extends Component {
   state = {
     recipes: [
@@ -56,13 +58,18 @@ class App extends Component {
   render() {
     const { recipes } = this.state;
     return (
-      <ListGroup className="recipe-list">
-        {recipes.map(({ id, name }) => (
-          <ListGroupItem key={id}> {name} </ListGroupItem>
-        ))}
+      <div>
+        <AppRouter></AppRouter>
+        <ListGroup className="recipe-list">
+          {recipes.map(({ id, name }) => (
+            <ListGroupItem key={id}> {name} </ListGroupItem>
+          ))}
 
-        {/* {this.addRecipes()} */}
-      </ListGroup>
+          {/* {this.addRecipes()} */}
+        </ListGroup>
+       
+
+      </div>
     );
   }
 }
