@@ -22,7 +22,13 @@ class App extends Component {
   };
 
   componentDidMount() {
-    return;
+    this.getRecipes();
+    // data = Object.keys(data).map(key => data[key]);
+    // const l = [];
+    // data.forEach(ss => {
+    //   l.push(ss.child("name").val());
+    // });
+    // this.state.data = data;
   }
 
   getRecipes = () => {
@@ -30,10 +36,12 @@ class App extends Component {
       .get(`/recipes.json`)
       .then(recipe => {
         console.log(`Getting recipes...`);
-        console.log(recipe.data);
-        this.setState({
-          recipes: recipe.data
-        });
+        console.log(recipe);
+        this.setState({ recipes: Object.values(recipe.data) });
+        // this.setState({
+        //   recipes: recipe.data
+        // });
+        // return recipe.data;
       })
       .catch(err => {
         console.log(err);
@@ -57,8 +65,8 @@ class App extends Component {
     const { recipes } = this.state;
     return (
       <ListGroup className="recipe-list">
-        {recipes.map(({ id, name }) => (
-          <ListGroupItem key={id}> {name} </ListGroupItem>
+        {recipes.map(({ id, recipe }) => (
+          <ListGroupItem key={recipe}> {recipe} </ListGroupItem>
         ))}
 
         {/* {this.addRecipes()} */}
