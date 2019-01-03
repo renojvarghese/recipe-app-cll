@@ -376,16 +376,22 @@ main {
     margin: auto;
 }
 
-.sldie-container.hidden {
 
-    display: none;
-}
-
-.carousel-slide,
 .carousel-inner,
 .carousel-control {
     height: 400px;
-    width: 800px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.active {
+    margin: 0 auto;
+    width: auto;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background: transparent !important;
 }
 
 section {
