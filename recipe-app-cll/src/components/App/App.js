@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
-import fire from "../../util/firebase";
+// import fire from "../../util/firebase";
 import axios from "../../util/axios";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+import Recipes from "../Recipes/Recipes";
+import Form from "../Form/Form";
 
 class App extends Component {
   state = {
@@ -13,55 +17,60 @@ class App extends Component {
     ]
   };
 
-  componentDidMount() {
+  componentWillMount() {
+    // return;
     this.getRecipes();
-    // data = Object.keys(data).map(key => data[key]);
-    // const l = [];
-    // data.forEach(ss => {
-    //   l.push(ss.child("name").val());
-    // });
-    // this.state.data = data;
   }
 
   getRecipes = () => {
     axios
       .get(`/recipes.json`)
-      .then(recipe => {
+      .then(res => {
         console.log(`Getting recipes...`);
-        console.log(recipe);
-        this.setState({ recipes: Object.values(recipe.data) });
-        // this.setState({
-        //   recipes: recipe.data
-        // });
-        // return recipe.data;
+        const recipes = [];
+        for (let key in res.data) {
+          recipes.push({
+            ...res.data[key],
+            id: key
+          });
+        }
+        this.setState({
+          recipes: recipes
+        });
       })
       .catch(err => {
         console.log(err);
       });
   };
 
-  addRecipes() {
+  addRecipes(name) {
     axios
       .post(`/recipes.json`, {
-        name: "egg pancake",
-        ingredients: ["egg", "pan"],
-        description: "pan can cake",
-        create_time: Date.now()
+        recipe: name
+        // ingredients: ["egg", "pan"],
+        // description: "pan can cake",
+        // create_time: Date.now()
       })
       .then(response => {
         console.log(response.data);
+        this.getRecipes();
       });
+  }
+
+  deleteRecipe(id) {
+    axios.delete(`/recipes/${id}.json`).then(res => {
+      console.log(res);
+      this.getRecipes();
+    });
   }
 
   render() {
     const { recipes } = this.state;
     return (
-      <div className="recipe-list">
-        {recipes.map(({ id, recipe }) => (
-          <li key={recipe}> {recipe} </li>
-        ))}
-
-        {/* {this.addRecipes()} */}
+      <div>
+        <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
+        <br />
+        <Form addRecipes={this.addRecipes.bind(this)} />
       </div>
     );
   }
