@@ -22,9 +22,9 @@ $(document).ready(() => {
     //Nav Bar opacity method
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 50) {
-            $('.nav-bar').addClass("active");
+            $('.nav-bar').addClass("nav-active");
         } else {
-            $('.nav-bar').removeClass('active');
+            $('.nav-bar').removeClass('nav-active');
         }
     });
 

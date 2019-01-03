@@ -212,7 +212,7 @@ footer {
     z-index: 13;
 }
 
-.nav-bar.active {
+.nav-bar.nav-active {
     background-color: rgba(248, 96, 92, 0.6);
 }
 
@@ -547,7 +547,7 @@ section {
     }
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1080px) {
     .slide-container {
         width: 80%;
     }
