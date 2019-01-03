@@ -217,7 +217,7 @@ footer {
 }
 
 .nav {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     width: 100%;
     text-align: center;
@@ -226,10 +226,11 @@ footer {
 
 .nav h2 {
     color: white;
+    margin-top: 0px;
 }
 
 .menu {
-    margin-left: 10px;
+    margin-top: 5px;
     align-self: flex-start;
     flex: 1;
     justify-self: center;
@@ -526,5 +527,25 @@ section {
 
 
 /*DashBoard Media Queries*/
+@media(max-width: 768px) {
+    .slide-container {
+        display: none;
+    }
+
+    .search {
+        margin-top: 5px;
+    }
+
+    .nav h2 {
+        display: none;
+    }
+}
+
+@media(max-width: 1024px) {
+    .slide-container {
+        width: 80%;
+    }
+
+}
 
 /*End Dashboard Media queries*/

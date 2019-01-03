@@ -4,11 +4,19 @@ $(document).ready(() => {
     const $toggleButton = $('.toggle-button');
     const $menuWrap = $('.menu-wrap');
 
+   /* $toggleButton.on('mouseenter', function (event) {
+        $(this).toggleClass('button-open');
+        $menuWrap.toggleClass('menu-show');
+    });
+    $menuWrap.on('mouseleave', function () {
+        $(this).toggleClass('toggle-button');
+        $menuWrap.toggleClass('menu-show');
+    });*/
     $toggleButton.on('click', function () {
         $(this).toggleClass('button-open');
         $menuWrap.toggleClass('menu-show');
     });
-
+    
 
 
     //Nav Bar opacity method
