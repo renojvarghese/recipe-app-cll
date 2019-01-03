@@ -2,14 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import fire from "../../util/firebase";
 import axios from "../../util/axios";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  ListGroup,
-  ListGroupItem,
-  Button,
-  ListGroupItemText
-} from "reactstrap";
 
 class App extends Component {
   state = {
@@ -64,13 +56,13 @@ class App extends Component {
   render() {
     const { recipes } = this.state;
     return (
-      <ListGroup className="recipe-list">
+      <div className="recipe-list">
         {recipes.map(({ id, recipe }) => (
-          <ListGroupItem key={recipe}> {recipe} </ListGroupItem>
+          <li key={recipe}> {recipe} </li>
         ))}
 
         {/* {this.addRecipes()} */}
-      </ListGroup>
+      </div>
     );
   }
 }
