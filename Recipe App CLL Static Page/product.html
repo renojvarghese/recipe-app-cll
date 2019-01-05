@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!--<link href="./resources/css/reset.css" rel="stylesheet">-->
+
+    <title>Recipe App</title>
+</head>
+
+<body>
+    <!--Nav Bar Elements-->
+    <header class="nav-bar">
+        <div class="nav">
+            <div class="icon">
+                <span class="toggle-button menu">
+                    <div class="menu-bar menu-bar-top"></div>
+                    <div class="menu-bar menu-bar-middle"></div>
+                    <div class="menu-bar menu-bar-bottom"></div>
+                </span>
+            </div>
+            <div>
+                <h2>Recipe App</h2>
+            </div>
+            <div>
+                <button class="add" input="submit" target="./product.html">Add Recipe</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="menu-wrap">
+            <div class="menu-sidebar">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Browse</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--End Navigation-->
+        <div class="add-recipe">
+            <form>
+                <div class="form-group recipe-name">
+                    <label for="exampleFormControlInput1">Recipe Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Recipe Name">
+                </div>
+                <div class="form-group cook-time">
+                    <label for="exampleFormControlInput1">Cook Time</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ex: 15-20 Mins">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Recipe Instructions</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="">Upload</span>
+                    </div>
+                </div>
+
+            </form>
+            <input class="save-btn" type="button" value="Save">
+    </main>
+
+
+    <!--Scripts For Jquery-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+
+</body>
+
+</html>
