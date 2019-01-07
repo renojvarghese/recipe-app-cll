@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import fire from "../../util/firebase";
-import axios from "../../util/axios";
+// import fire from "../../util/firebase";
+// import axios from "../../util/axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -10,6 +10,8 @@ import {
   Button,
   ListGroupItemText
 } from "reactstrap";
+
+import AppRouter from "../AppRouter";
 
 class App extends Component {
   state = {
@@ -25,44 +27,49 @@ class App extends Component {
     return;
   }
 
-  getRecipes = () => {
-    axios
-      .get(`/recipes.json`)
-      .then(recipe => {
-        console.log(`Getting recipes...`);
-        console.log(recipe.data);
-        this.setState({
-          recipes: recipe.data
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
+  // getRecipes = () => {
+  //   axios
+  //     .get(`/recipes.json`)
+  //     .then(recipe => {
+  //       console.log(`Getting recipes...`);
+  //       console.log(recipe.data);
+  //       this.setState({
+  //         recipes: recipe.data
+  //       });
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // };
 
-  addRecipes() {
-    axios
-      .post(`/recipes.json`, {
-        name: "egg pancake",
-        ingredients: ["egg", "pan"],
-        description: "pan can cake",
-        create_time: Date.now()
-      })
-      .then(response => {
-        console.log(response.data);
-      });
-  }
+  // addRecipes() {
+  //   axios
+  //     .post(`/recipes.json`, {
+  //       name: "egg pancake",
+  //       ingredients: ["egg", "pan"],
+  //       description: "pan can cake",
+  //       create_time: Date.now()
+  //     })
+  //     .then(response => {
+  //       console.log(response.data);
+  //     });
+  // }
 
   render() {
     const { recipes } = this.state;
     return (
-      <ListGroup className="recipe-list">
-        {recipes.map(({ id, name }) => (
-          <ListGroupItem key={id}> {name} </ListGroupItem>
-        ))}
+      <div>
+        <AppRouter></AppRouter>
+        <ListGroup className="recipe-list">
+          {recipes.map(({ id, name }) => (
+            <ListGroupItem key={id}> {name} </ListGroupItem>
+          ))}
 
-        {/* {this.addRecipes()} */}
-      </ListGroup>
+          {/* {this.addRecipes()} */}
+        </ListGroup>
+       
+
+      </div>
     );
   }
 }
