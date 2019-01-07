@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="./media/kollektif" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Account Settings</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="container-fluid">
+        <h1>Account Settings</h1>
+
+      </div>
+
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#profileModal" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#recipeSettingsModal" href="#">Recipe Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Account</a>
+            </li>
+          </ul>
+
+    </header>
+
+<!-- Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="profileModalLabel">Profile Settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="label-content">
+          <img class="imgProfile" src="./media/picture.png" alt="profile image" style="width:128px;height:128px;" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="passwordInput" value="abcd" placeholder="Password">
+          <input id="passwordBox" type="checkbox" onclick="myFunction()"/>Show Password
+        </div>
+      </div>
+
+
+  <!-- Save button commented out for optional use -->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- recipe settings modal-->
+
+<div id="recipeSettingsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="recipeSettingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="profileModalLabel">Recipe Settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="label-content">
+          <div id="navRecipe" class="container">
+            <button id="addRecipesBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addRecipes" href="#">Add Recipes</button>
+            <button id="addRecipesBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#manageRecipes" class="button"href="#">Manage Recipes</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- add recipes modal -->
+
+<div id="addRecipes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addRecipesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Recipes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+  <!-- add recipes modal body  -->
+      <div class="modal-body">
+
+        <div class="label-content">
+
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile02">
+              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+            </div>
+          </div>
+        </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cook Time">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tags">
+              </div>
+          </form>
+
+      </div>
+
+      <div class="label-content">
+        <h5 id="ingredientListHeader">Ingredient List</h5>
+      </div>
+      <div id="ingredientList" class="label-content">
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="qty (1)">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="value (cup)">
+            </div>
+            <div class="col-7">
+              <input type="text" class="form-control" placeholder="ingredient (milk)">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="qty (1)">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="value (cup)">
+            </div>
+            <div class="col-7">
+              <input type="text" class="form-control" placeholder="ingredient (milk)">
+            </div>
+          </div>
+          <h5 id="cookingInstructions">Cooking Instructions</h5>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="1.">
+            </div>
+            <div class="col-11">
+              <input type="text" class="form-control" placeholder="First step...">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="2.">
+            </div>
+            <div class="col-11">
+              <input type="text" class="form-control" placeholder="Second step...">
+            </div>
+          </div>
+        </form>
+      </div>
+
+  <!-- add recipes modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- manage recipes modal -->
+
+<div id="manageRecipes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="manageRecipesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="manageRecipes">Manage Recipes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+  <!-- manage recipes modal body -->
+      <div class="modal-body container-fluid">
+        <div id="recipeList" class="row content">
+
+
+            <div class="col-6 col-md-4">
+              <div class="text-center">
+                <img class="img-thumbnail" src="./media/picture.png" alt="picture thumbnail">
+              </div>
+                <div class="caption">
+                <h3>Recipe Title</h3>
+                <p>Date Added</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <div class="text-center">
+                <img class="img-thumbnail" src="./media/picture.png" alt="picture thumbnail">
+              </div>
+              <div class="caption">
+                <h3>Recipe Title</h3>
+                <p>Date Added</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <div class="text-center">
+                <img class="img-thumbnail" src="./media/picture.png" alt="picture thumbnail">
+              </div>
+              <div class="caption">
+                <h3>Recipe Title</h3>
+                <p>Date Added</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <div class="text-center">
+                <img class="img-thumbnail" src="./media/picture.png" alt="picture thumbnail">
+              </div>
+              <div class="caption">
+                <h3>Recipe Title</h3>
+                <p>Date Added</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <div class="text-center">
+                <img class="img-thumbnail" src="./media/picture.png" alt="picture thumbnail">
+              </div>
+              <div class="caption">
+                <h3>Recipe Title</h3>
+                <p>Date Added</p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <div class="text-center">
+                <img class="img-thumbnail" src="./media/picture.png" alt="picture thumbnail">
+              </div>
+              <div class="caption">
+                <h3>Recipe Title</h3>
+                <p>Date Added</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="./main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
