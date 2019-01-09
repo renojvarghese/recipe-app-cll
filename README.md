@@ -5,3 +5,5 @@ Renoj Varghese
 Justin C
 Tom Raley
 Andre Pato
+Jenny Tsen
+Thanita Glancey

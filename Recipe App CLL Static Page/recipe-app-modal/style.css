@@ -1,0 +1,163 @@
+body {
+  font-family: 'Kollektif', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  background-color: #feddcc;
+}
+
+header.container-fluid, h1 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  text-align: center;
+  margin-top: .5em;
+}
+
+.nav-item {
+  padding-top: 1em;
+}
+
+.nav-link {
+  color: #fff;
+  font-size:
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #3c1d30;
+  text-decoration: underline;
+}
+
+/* modal style */
+
+.modal-body, .modal-content, .modal-header {
+  background-color: #feddcc;
+  color: #3c1d30;
+}
+
+.btn {
+  color: #fff;
+  background-color: #8da05e;
+  border: none;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.btn:hover {
+  color: #3c1d30;
+  border-bottom: solid 1px #3c1d30;
+}
+
+.btn:active {
+  color: #3c1d30;
+  border-bottom: solid 1px #3c1d30;
+}
+
+.btn-secondary {
+  background-color: #f8605c;
+}
+
+.btn-secondary:hover {
+  background-color: #f8605c;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #8da05e;
+}
+
+.btn-primary:hover {
+  background-color: #8da05e;
+}
+
+#navRecipe.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#addRecipesBtn {
+  padding: 10px;
+  background-color: #8da05e;
+  color: #fff;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.17);
+}
+
+#addRecipesBtn, a {
+  text-decoration: none;
+}
+
+#addRecipesBtn:hover {
+  color: #3c1d30;
+  text-decoration: none;
+  border-bottom: none;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+/* label styles */
+
+#cookingInstructions, h5 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.imgProfile {
+  padding: .5em;
+}
+
+.label-content {
+  display: flex;
+  padding: .1em;
+}
+
+.input-field {
+  width: 100%;
+  margin: .25em;
+  padding: .75em;
+  outline: none;
+}
+
+#ingredientListHeader {
+  text-align: center;
+  border-bottom: solid .1rem #3c1d30;
+  width: 100%;
+  padding-bottom: .5rem;
+}
+
+#ingredientList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+}
+
+#passwordBox {
+  margin: .1em 1em;
+}
+
+#recipeList.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+
+}
+
+.img-thumbnail {
+  background-color: #fff;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+
+.caption {
+  background-color: #8da05e;
+  padding: .5rem;
+  text-align: left;
+  width: 100%;
+}

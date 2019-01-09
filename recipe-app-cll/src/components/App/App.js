@@ -7,6 +7,8 @@ import axios from "../../util/axios";
 import Recipes from "../Recipes/Recipes";
 import Form from "../Form/Form";
 
+import AppRouter from "../AppRouter";
+
 class App extends Component {
   state = {
     recipes: [
@@ -68,6 +70,7 @@ class App extends Component {
     const { recipes } = this.state;
     return (
       <div>
+        <AppRouter></AppRouter>
         <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
         <br />
         <Form addRecipes={this.addRecipes.bind(this)} />
