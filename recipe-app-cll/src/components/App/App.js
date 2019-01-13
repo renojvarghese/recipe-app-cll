@@ -10,7 +10,7 @@ import Form from "../Form/Form";
 import AppRouter from "../AppRouter";
 
 class App extends Component {
-  state = {
+ state = {
     recipes: [
       { id: 1, name: "Omelet" },
       { id: 2, name: "Egg Benedict" },
@@ -71,9 +71,9 @@ class App extends Component {
     return (
       <div>
         <AppRouter></AppRouter>
-        <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
+        {/*<Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
         <br />
-        <Form addRecipes={this.addRecipes.bind(this)} />
+    <Form addRecipes={this.addRecipes.bind(this)} />*/}
       </div>
     );
   }

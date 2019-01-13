@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "Recipe App CLL Static Page"
+		},
+		{
+			"path": "recipe-app-cll"
 		}
 	],
 	"settings": {

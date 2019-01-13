@@ -1,12 +1,23 @@
 import React from "react";
+import NavBar from "./NavBar";
+import Menu from "./Menu";
+import CardContainer from "./CardContainer";
+import CarouselSlide from "./Carousel";
+import SearchButton from "./SearchButton";
+
 
 export default class Dashboard extends React.Component {
     render() {
-        return (
+        return(
+            
             <div>
-                <h1>I am the Dashboard Component</h1>
-                <h2>Edit me from src/components/Dashboard/index.js</h2>
-                <h2>Edit my styles from src/components/App/App.css</h2>
+                <NavBar></NavBar>
+                <Menu></Menu>
+                <main>
+                <CarouselSlide></CarouselSlide>
+                <SearchButton></SearchButton>
+                <CardContainer></CardContainer>
+                </main>
             </div>
         )
     }
