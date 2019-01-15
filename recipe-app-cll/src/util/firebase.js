@@ -10,4 +10,6 @@ var config = {
   messagingSenderId: env.messagingSenderId
 };
 
-export const fire = firebase.initializeApp(config);
+const fire = firebase.initializeApp(config);
+
+export default fire;
