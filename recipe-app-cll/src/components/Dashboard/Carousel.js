@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Carousel from 'bootstrap';
+
 
 export class CarouselSlide extends Component {
     render() {
