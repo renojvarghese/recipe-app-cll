@@ -7,6 +7,7 @@ $(document).ready(() => {
     $toggleButton.on('mouseenter', function () {
         $(this).toggleClass('button-open');
         $menuWrap.toggleClass('menu-show');
+        console.log(toggleButton)
     });
     $menuWrap.on('mouseleave', function () {
         $toggleButton.removeClass('button-open');
@@ -17,7 +18,7 @@ $(document).ready(() => {
         $menuWrap.toggleClass('menu-show');
     });
 
-
+    
 
     //Nav Bar opacity method
     $(window).on('scroll', function () {
@@ -27,6 +28,4 @@ $(document).ready(() => {
             $('.nav-bar').removeClass('nav-active');
         }
     });
-
-
 });

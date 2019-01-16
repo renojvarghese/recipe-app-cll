@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 
 
 
-export class Menu extends Component {    
+export class Menu extends Component {  
+    
+
     render(){
         return (
-            <div class="menu-wrap">
-            <div class="menu-sidebar">
-                <ul class="menu">
+            <div className="menu-wrap">
+            <div className="menu-sidebar">
+                <ul className="menu">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./dashboard.html">Browse</a></li>
                     <li><a href="#">Account Settings</a></li>

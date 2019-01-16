@@ -295,7 +295,7 @@ footer {
     position: fixed;
     width: 44px;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
     transition: .25s;
     z-index: 15;
     transform: translate(-22px, -20px);
@@ -332,6 +332,7 @@ footer {
     border-top: none;
     top: 22px;
 }
+
 
 .button-open .menu-bar-top {
     transform: rotate(45deg) translate(8px, 8px);
