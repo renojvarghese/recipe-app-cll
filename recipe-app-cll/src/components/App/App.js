@@ -71,9 +71,12 @@ class App extends Component {
     return (
       <div>
         <AppRouter></AppRouter>
-        <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
+        {/*
+          <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
         <br />
+        {/*
         <Form addRecipes={this.addRecipes.bind(this)} />
+        */}
       </div>
     );
   }
