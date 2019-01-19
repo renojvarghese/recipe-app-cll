@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    Carousel,
+    CarouselItem,
+    CarouselControl,
+    CarouselIndicators,
+    CarouselCaption
+} from 'reactstrap';
 
 export class CarouselSlide extends Component {
     render() {
         return (
-            <div class="slide-container">
+            
+            <CarouselItem></CarouselItem>
+
+            /*<div class="slide-container">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     
                     <ol class="carousel-indicators">
@@ -38,7 +48,7 @@ export class CarouselSlide extends Component {
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </div>
+            </div>*/
         )
     }
 }

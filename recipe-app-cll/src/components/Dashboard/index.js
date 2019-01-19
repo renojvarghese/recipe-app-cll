@@ -4,6 +4,7 @@ import Menu from "./Menu";
 import CardContainer from "./CardContainer";
 import CarouselSlide from "./Carousel";
 import SearchButton from "./SearchButton";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class Dashboard extends React.Component {
