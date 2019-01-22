@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import fire from "../../util/firebase";
-require("firebase/auth");
+require("firebase/auth"); // to prevent weird bugs by firebase
 
 // log in to the app
 class Auth extends Component {
@@ -20,7 +20,7 @@ class Auth extends Component {
   };
 
   // log in with form data
-  login = (e, account) => {
+  login = e => {
     e.preventDefault();
     fire
       .auth()
@@ -33,9 +33,6 @@ class Auth extends Component {
           loginedEmail: this.state.email
         });
         alert("Successful Login!");
-
-        // set which account to log in as
-        // this.props.setAccount(account);
       })
       .catch(error => {
         // this.props.setMessage(error.message);
@@ -55,7 +52,7 @@ class Auth extends Component {
             onChange={this.handleTermChange}
             type="email"
             name="email"
-            placeholder="Admin Email"
+            placeholder="Email"
           />
           <br />
           <input
@@ -66,11 +63,8 @@ class Auth extends Component {
             placeholder="Password"
           />
           <br />
-          <button type="submit" onClick={e => this.login(e, "student")}>
+          <button type="submit" onClick={e => this.login(e)}>
             Log in
-          </button>
-          <button type="submit" onClick={e => this.login(e, "admin")}>
-            Log in as Admin
           </button>
         </form>
       </div>
