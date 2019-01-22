@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import MenuBtn from './MenuBtn';
+
 export class NavBar extends Component {
 
     render() {
 
         return ( 
         <header className = "nav-bar" >
-            <div className = "nav" >
                 <div className="icon">
                     <MenuBtn></MenuBtn>
                 </div>
@@ -16,7 +16,6 @@ export class NavBar extends Component {
                 <div>
                     <a href = "./product.html">< button className = "add"> Add Recipe </button></a>
                 </div> 
-            </div> 
         </header>
         )
     }

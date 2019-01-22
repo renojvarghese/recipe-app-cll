@@ -264,34 +264,25 @@ footer {
     background-color: rgba(248, 96, 92);
     transition: all 0.2s ease-in-out;
     z-index: 13;
-}
-
-.nav-bar.nav-active {
-    background-color: rgba(248, 96, 92, 0.6);
-}
-
-.nav {
     display: inline-flex;
     align-items: center;
     width: 100%;
-    text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.nav h2 {
+.nav-bar .nav-active {
+    background-color: rgba(248, 96, 92, 0.6);
+}
+
+.nav-bar h2 {
     color: white;
     margin-top: 0px;
 }
 
 .menu {
     margin-top: 5px;
-    align-self: flex-start;
-    flex: 1;
-    justify-self: center;
     color: white;
-}
-
-.toggle-button {
+    float: left;
     position: fixed;
     width: 44px;
     height: 40px;
@@ -302,14 +293,18 @@ footer {
     transition: .25s;
 }
 
-.toggle-button:hover {
+.menu:hover {
+    cursor: pointer;
+}
+
+.togggle-button:hover {
     cursor: pointer;
 }
 
 .toggle-button .menu-bar {
     position: absolute;
     border-radius: 2px;
-    width: 80%;
+    width: 100%;
     transition: .5s;
 }
 
@@ -332,7 +327,6 @@ footer {
     border-top: none;
     top: 22px;
 }
-
 
 .button-open .menu-bar-top {
     transform: rotate(45deg) translate(8px, 8px);

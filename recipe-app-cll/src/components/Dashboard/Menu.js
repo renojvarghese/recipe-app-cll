@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import MenuBtn from './MenuBtn';
 
 
 
 
 export class Menu extends Component {  
-    
+
+
+
 
     render(){
         return (

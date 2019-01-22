@@ -1,10 +1,11 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./NavBar";
 import Menu from "./Menu";
 import CardContainer from "./CardContainer";
 import CarouselSlide from "./Carousel";
 import SearchButton from "./SearchButton";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export default class Dashboard extends React.Component {
@@ -12,9 +13,9 @@ export default class Dashboard extends React.Component {
         return(
             
             <div>
-                <NavBar></NavBar>
-                <Menu></Menu>
+                <NavBar></NavBar>               
                 <main>
+                <Menu></Menu>
                 <CarouselSlide></CarouselSlide>
                 <SearchButton></SearchButton>
                 <CardContainer></CardContainer>
