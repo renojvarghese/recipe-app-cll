@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 // import fire from "../../util/firebase";
 import axios from "../../util/axios";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Recipes from "../Recipes/Recipes";
 import Form from "../Form/Form";
