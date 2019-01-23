@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
-import MenuBtn from './MenuBtn';
+
 
 
 
 
 export class Menu extends Component {  
 
+            state = {
+                visible: false,
+            }
 
+            toggleMenu = ()=> {
+                this.setState({visble: !this.state.visble})
+            }
 
+            showMenu = ()=> {
+                if (this.state.visible){
+                    return "menu-wrap menu-show"
+                } else {
+                    return "menu-wrap"
+                }
+            }
 
     render(){
+
+
         return (
             <div className="menu-wrap">
             <div className="menu-sidebar">

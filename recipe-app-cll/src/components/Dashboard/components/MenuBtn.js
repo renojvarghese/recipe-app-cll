@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import BarTop from './components/BarTop';
-import BarMid from './components/BarMid';
-import BarBot from './components/BarBot';
+import BarTop from './BarTop';
+import BarMid from './BarMid';
+import BarBot from './BarBot';
+import Menu from './Menu';
+import {showMenu}  from './Menu';
 
 
 
@@ -25,15 +27,19 @@ export class MenuBtn extends Component {
         }
     }
 
+    toggleClasses(){
+        showMenu();
+        this.toggleBtn();
+    }
 
     render(){
 
         return (
             
-            <span className={this.setStyleMenu()} onClick={this.toggleBtn}>
-                    <div className="menu-bar menu-bar-top"></div>
-                    <div className="menu-bar menu-bar-middle"></div>
-                    <div className="menu-bar menu-bar-bottom"></div>
+            <span className={this.setStyleMenu()} onClick={this.toggleClasses}>
+                <BarTop></BarTop>
+                <BarMid></BarMid>
+                <BarBot></BarBot>
             </span>
         )
     }

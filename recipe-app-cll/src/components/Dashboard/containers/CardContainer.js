@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardItem from './components/Card';
+import CardItem from '../components/Card';
 
 export class Cards extends Component {
 

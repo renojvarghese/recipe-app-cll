@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MenuBtn from './MenuBtn';
+import MenuBtn from '../components/MenuBtn';
 
 export class NavBar extends Component {
 
