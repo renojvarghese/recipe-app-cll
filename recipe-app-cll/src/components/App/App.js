@@ -74,7 +74,6 @@ class App extends Component {
         <AppRouter />
         <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />
         <br />
-        {/*
         <Form addRecipes={this.addRecipes.bind(this)} />
         <br />
         <Auth />
