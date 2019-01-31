@@ -129,22 +129,18 @@ h2 {
     padding: 8px 25px 8px 25px;
     margin-top: 10px;
     width: 50%;
-}
-
-/*.email {
-    padding: 8px 25px 8px 25px;
-    margin: 10px;
-    width: 50%;
     border-radius: 10px 10px;
-    border-top-color: lightgray;
-    border-right-color:grey;
-    border-bottom-color: grey;
-    border-left-color: lightgray;
-}*/
+    border-style: solid;
+    border-color: #e0dddd;
+}
 
 .password {
     margin-bottom: 20px;    
-/*    border-radius: 15px 15px; */
+}
+
+.display-error {
+    color: red;
+    margin-bottom: 20px;
 }
 
 .signin-btn {
