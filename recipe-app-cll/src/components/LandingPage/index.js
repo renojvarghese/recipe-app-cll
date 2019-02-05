@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import fire from "../../util/firebase";
 
 export default class LandingPage extends React.Component {
-    constructor() {
-      super()
+    constructor(props) {
+      super(props)
 
       this.authEmailPwd = this.authEmailPwd.bind(this)
 
@@ -62,7 +62,33 @@ export default class LandingPage extends React.Component {
     });
   }
 
+  handlePasswordChange = (event) => {
+    this.setState({Password: event.target.value}, () => {
+      this.validatePassword();
+      console.log('Password Change');
+    });
+  };
+
+  validatePassword = () => {
+    const { password } = this.state;
+    this.setState({
+      passwordError:
+        password.length > 5 ? null : 'Password must be longer than 5 characters'
+    });
+  }
+
     render() {
+
+      let errorMsg = '';
+
+      if (this.state.emailError) {
+        errorMsg = this.state.emailError;
+      }
+
+      if (this.state.passwordError) {
+        errorMsg = errorMsg + ' ' + this.state.passwordError;
+      }
+
         return (
             <div>
                 <div id="container">
@@ -98,8 +124,7 @@ export default class LandingPage extends React.Component {
                           onBlur={this.validatePassword}>
                         </input>
                       </div>
-                      <div className='display-error'>{this.state.emailError}
-                      </div>
+                      <div className='display-error'>{errorMsg}</div>
                       <input className="signin-btn" type="submit" value="Sign In">
                       </input>  
                     </form>
