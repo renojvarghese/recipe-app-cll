@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import pic from './pic.png';
-import './App.css';
+import '.App/App.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText, FormFeedback, CustomInput, Container, Row, Col } from 'reactstrap';
 
 

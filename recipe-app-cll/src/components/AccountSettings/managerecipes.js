@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import pic from './pic.png';
-import './App.css';
+import '.App/App.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Card, CardBody, CardTitle, CardText, CardImg, Container, Row, Col } from 'reactstrap';
 
 
