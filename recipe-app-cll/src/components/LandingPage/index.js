@@ -49,13 +49,14 @@ export default class LandingPage extends React.Component {
 
   handleEmailChange = (event) => {
     this.setState({email: event.target.value}, () => {
-      this.validateEmail();
       console.log('Email Change');
+      this.validateEmail();
     });
   };
 
   validateEmail = () => {
     const { email } = this.state;
+    console.log('Email length: ' + email.length);
     this.setState({
       emailError:
         email.length > 5 ? null : 'Email must be longer than 5 characters'
@@ -63,14 +64,16 @@ export default class LandingPage extends React.Component {
   }
 
   handlePasswordChange = (event) => {
-    this.setState({Password: event.target.value}, () => {
-      this.validatePassword();
+    this.setState({password: event.target.value}, () => {
       console.log('Password Change');
+      this.validatePassword();
     });
   };
 
   validatePassword = () => {
     const { password } = this.state;
+    // console.log('Password length: ' + password.length);
+    // console.log('Password Detail: ' + this.state.password);
     this.setState({
       passwordError:
         password.length > 5 ? null : 'Password must be longer than 5 characters'
@@ -79,6 +82,7 @@ export default class LandingPage extends React.Component {
 
     render() {
 
+/*
       let errorMsg = '';
 
       if (this.state.emailError) {
@@ -88,7 +92,7 @@ export default class LandingPage extends React.Component {
       if (this.state.passwordError) {
         errorMsg = errorMsg + ' ' + this.state.passwordError;
       }
-
+*/
         return (
             <div>
                 <div id="container">
@@ -103,6 +107,7 @@ export default class LandingPage extends React.Component {
                   <div className="right">
                     <form onSubmit={(event) => this.authEmailPwd(event)}>
                       <div>
+                        { /* autofocus removed */ }
                         <input 
                           className="email" 
                           name="email" 
@@ -112,6 +117,9 @@ export default class LandingPage extends React.Component {
                           onChange={this.handleEmailChange}
                           onBlur={this.validateEmail}>
                         </input>
+                      </div>
+                      <div className="display-error"> 
+                        {this.state.emailError} 
                       </div>
                       <div>
                         <input 
@@ -124,8 +132,14 @@ export default class LandingPage extends React.Component {
                           onBlur={this.validatePassword}>
                         </input>
                       </div>
-                      <div className='display-error'>{errorMsg}</div>
-                      <input className="signin-btn" type="submit" value="Sign In">
+                      <div className="display-error"> 
+                        {this.state.passwordError} 
+                      </div>
+                      <input 
+                        className="signin-btn" 
+                        type="submit" 
+                        value="Sign In"
+                      >
                       </input>  
                     </form>
                     <div className="links">
