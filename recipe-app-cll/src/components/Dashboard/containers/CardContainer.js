@@ -9,6 +9,9 @@ export class Cards extends Component {
         return (
             <div className="card-container">
                 <CardItem></CardItem>
+                <CardItem></CardItem>
+                <CardItem></CardItem>
+                <CardItem></CardItem>
             </div>
         )
     }    

@@ -4,12 +4,12 @@ export class SearchButton extends Component {
     render() {
         return (
         
-            <div class="search">
+            <div className="search">
                 <form>
                 <label>
                     <input type="text" placeholder="Search"/>
                 </label>
-                <button class="srch-btn" input="submit">Search</button>
+                <button className="srch-btn" input="submit">Search</button>
                 </form>
             </div>
         )

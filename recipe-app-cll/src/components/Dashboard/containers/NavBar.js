@@ -7,9 +7,6 @@ export class NavBar extends Component {
 
         return ( 
         <header className = "nav-bar" >
-                <div className="icon">
-                    <MenuBtn></MenuBtn>
-                </div>
                 <div >
                     <h2 > Recipe App </h2> 
                 </div> 

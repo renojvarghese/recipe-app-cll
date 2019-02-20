@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import BarTop from './BarTop';
-import BarMid from './BarMid';
-import BarBot from './BarBot';
-import Menu from './Menu';
-import {showMenu}  from './Menu';
+
+
 
 
 
@@ -13,13 +10,11 @@ export class MenuBtn extends Component {
         clicked: false
     }
 
-
     toggleBtn = ()=> {
         this.setState({clicked: !this.state.clicked})
     }
 
-    setStyleMenu = ()=> {
-        
+    setStyleBtn = ()=> {
         if(this.state.clicked){
             return "toggle-button menu button-open"
         } else {
@@ -27,20 +22,27 @@ export class MenuBtn extends Component {
         }
     }
 
-    toggleClasses(){
-        showMenu();
+
+    //wraps both functions to trigger action for menu and btn
+    onClickHandler = () => {
+        this.props.toggleMenu();
         this.toggleBtn();
     }
+    
 
     render(){
-
+        
+        const styleBtn = this.state.clicked ? "toggle-button menu button-open" : "toggle-button menu";
+        
         return (
             
-            <span className={this.setStyleMenu()} onClick={this.toggleClasses}>
-                <BarTop></BarTop>
-                <BarMid></BarMid>
-                <BarBot></BarBot>
-            </span>
+            <div className="icon">
+                <div className={styleBtn} onClick={this.onClickHandler}>
+                    <div className ="menu-bar menu-bar-top"></div>
+                    <div className = "menu-bar menu-bar-middle"> </div> 
+                    <div className ="menu-bar menu-bar-bottom"> </div>
+                </div>
+            </div>
         )
     }
 }
