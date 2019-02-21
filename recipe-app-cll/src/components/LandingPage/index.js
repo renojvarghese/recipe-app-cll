@@ -11,7 +11,7 @@ export default class LandingPage extends React.Component {
       this.state = {
         email: "",
         password: "",
-        loginStatus: 1,
+        loginStatus: false,
         loginEmail: "",
         emailError: "",
         passwordError: ""
@@ -37,12 +37,17 @@ export default class LandingPage extends React.Component {
         this.setState({
           email: "",
           password: "",
-          loginStatus: 1,
+          loginStatus: true,
           loginEmail: this.emailInput.value
         });
         console.log(`Login successful with ${this.emailInput.value}`);
+        this.props.history.push("/Dashboard");
       })
       .catch(error => {
+        this.setState({
+          loginStatus: false,
+          passwordError: error.message
+        });
         console.log(error);
       });
   };
@@ -72,8 +77,7 @@ export default class LandingPage extends React.Component {
 
   validatePassword = () => {
     const { password } = this.state;
-    // console.log('Password length: ' + password.length);
-    // console.log('Password Detail: ' + this.state.password);
+    console.log('Password length: ' + password.length);
     this.setState({
       passwordError:
         password.length > 5 ? null : 'Password must be longer than 5 characters'
@@ -140,7 +144,7 @@ export default class LandingPage extends React.Component {
                         type="submit" 
                         value="Sign In"
                       >
-                      </input>  
+                      </input>
                     </form>
                     <div className="links">
                       <p><Link to="../CreateAccount">Create Account</Link></p>
