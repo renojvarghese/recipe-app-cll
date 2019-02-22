@@ -37,7 +37,7 @@ export class MenuBtn extends Component {
         return (
             
             <div className="icon">
-                <div className={styleBtn} onClick={this.onClickHandler}>
+                <div className={styleBtn} onClick={this.onClickHandler} onMouseEnter={this.onClickHandler}>
                     <div className ="menu-bar menu-bar-top"></div>
                     <div className = "menu-bar menu-bar-middle"> </div> 
                     <div className ="menu-bar menu-bar-bottom"> </div>
