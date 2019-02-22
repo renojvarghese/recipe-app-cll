@@ -86,17 +86,6 @@ export default class LandingPage extends React.Component {
 
     render() {
 
-/*
-      let errorMsg = '';
-
-      if (this.state.emailError) {
-        errorMsg = this.state.emailError;
-      }
-
-      if (this.state.passwordError) {
-        errorMsg = errorMsg + ' ' + this.state.passwordError;
-      }
-*/
         return (
             <div>
                 <div id="container">
