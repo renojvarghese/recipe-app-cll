@@ -137,7 +137,7 @@ export default class LandingPage extends React.Component {
                       </input>
                     </form>
                     <div className="links">
-                      <p><Link to="../CreateAccount">Create Account</Link></p>
+                      <p><Link to={`CreateAccount`}>Create Account</Link></p>
                       <p><Link to="../TermsConditions">Terms &amp; Conditions</Link></p>
                     </div>
                     <footer>Copyright 2019</footer>

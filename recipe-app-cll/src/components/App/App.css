@@ -80,7 +80,7 @@ h1 {
     color: #B22230;
 }
 
-h2 {
+.left h2 {
     padding-top: 10px;
     padding-right: 150px;
     padding-bottom: 10px;
@@ -125,6 +125,20 @@ h2 {
     color: #F8605c;
 }
 
+.right h2 {
+    color: #B22230;  
+    margin-bottom: 20px;
+    font-family: "Josefin Sans";
+}
+
+.right h4 {
+    /* color: #B22230; */
+    margin-bottom: 20px;
+    color:  #3C1D30;    
+    font-family: "Kollektif";
+    font-style: italic;
+}
+
 .email, .password {
     padding: 8px 25px 8px 25px;
     margin-top: 10px;
@@ -133,6 +147,7 @@ h2 {
     border-radius: 10px 10px;
     border-style: solid;
     border-color: #e0dddd;
+    font-family: "Kollektif";
 }
 
 .password {
@@ -154,6 +169,7 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.5s;
+    font-family: "Kollektif";
 }
 
 .signin-btn:hover {
