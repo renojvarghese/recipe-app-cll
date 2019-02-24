@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import pic from './pic.png';
-import '.App/App.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText, FormFeedback, CustomInput, Container, Row, Col } from 'reactstrap';
 
 
-class ModalExample extends React.Component {
+class AddRecipes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,14 +40,8 @@ class ModalExample extends React.Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>Recipe Settings</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Recipe Settings</ModalHeader>
-          <ModalBody>
-            <br />
-            <Button color="success" onClick={this.toggleNested}>Add Recipes</Button>{' '}
-            <Button color="success" onClick={this.toggleNested}>Manage Recipes</Button>
-            <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} onClosed={this.state.closeAll ? this.toggle : undefined}>
+          <Button color="success" onClick={this.toggle}>Add Recipes</Button>
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               <ModalHeader>Add Recipes</ModalHeader>
               <ModalBody>
               <Form>
@@ -154,17 +147,12 @@ class ModalExample extends React.Component {
               </ModalBody>
               <ModalFooter>
                 <Button color="success" onClick={this.toggle}>Save</Button>{' '}
-                <Button color="secondary" onClick={this.toggleNested}>Go Back</Button>
+                <Button color="secondary" onClick={this.toggle}>Go Back</Button>
               </ModalFooter>
             </Modal>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-          </ModalFooter>
-        </Modal>
       </div>
     );
   }
 }
 
-export default ModalExample;
+export default AddRecipes;

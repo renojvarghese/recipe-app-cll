@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import pic from './pic.png';
-import '.App/App.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText, FormFeedback } from 'reactstrap';
 
 
-class ModalExample extends React.Component {
+class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,4 +73,4 @@ class ModalExample extends React.Component {
   }
 }
 
-export default ModalExample;
+export default Profile;
