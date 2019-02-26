@@ -37,6 +37,7 @@ class App extends Component {
             id: key
           });
         }
+        console.log(recipes);
         this.setState({
           recipes: recipes
         });
@@ -46,13 +47,15 @@ class App extends Component {
       });
   };
 
-  addRecipes(name) {
+  addRecipes(formValues) {
     axios
-      .post(`/recipes.json`, {
-        recipe: name
-        // ingredients: ["egg", "pan"],
-        // description: "pan can cake",
-        // create_time: Date.now()
+      .post(`/recipes.json`, {        
+        title: formValues.title,
+        cook_time: formValues.cook_time,
+        description: formValues.description
+        // ingredients: ingredients
+        // ingredients: {"name": "salt", "quantity": 2, "unit": "teaspoon"},
+        // create_time: Date.now()eatable
       })
       .then(response => {
         console.log(response.data);
