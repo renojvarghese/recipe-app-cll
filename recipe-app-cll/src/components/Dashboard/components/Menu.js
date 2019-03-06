@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import LandingPage from '../../LandingPage/index';
+import CreateAccount from '../../CreateAccount/index';
+import Form from '../../Form/Form';
+import Dashboard from '../../Dashboard/index'
 
 
 
@@ -17,10 +22,10 @@ export class Menu extends Component {
         <div className={menuShow} >
             <div className="menu-sidebar" >
                 <ul className="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./dashboard.html">Browse</a></li>
-                    <li><a href="#">Account Settings</a></li>
-                    <li><a href="#">Contact</a></li>
+                <Link to={LandingPage}><li> Home</li></Link> 
+                <Link to={Dashboard} ><li> Dashboard</li></Link> 
+                <Link to= {Form}><li> Settings</li></Link> 
+                <Link to={CreateAccount} ><li> Contact</li></Link> 
                 </ul>
             </div>
         </div>
