@@ -6,9 +6,9 @@ class Form extends Component {
       title: "",
       cook_time: "",
       description: "",
-      // ingredients_name: "",
-      // ingredients_quantity: "",
-      // ingredients_unit: ""
+      ingredients_name: "",
+      ingredients_quantity: "",
+      ingredients_unit: ""
     }
   };
 
@@ -47,6 +47,24 @@ class Form extends Component {
           <input
             name="description"
             placeholder="description"
+            onChange={this.handleTermChange.bind(this)}
+          />
+          <br/>
+          <label>Ingredients: </label>
+          <input
+            name="ingredients_quantity"
+            placeholder="quantity(~3)"
+            onChange={this.handleTermChange.bind(this)}
+          />
+          <input
+            name="ingredients_unit"
+            placeholder="unit(~teaspoon)"
+            onChange={this.handleTermChange.bind(this)}
+          />
+          of
+          <input
+            name="ingredients_name"
+            placeholder="food_name(~milk)"
             onChange={this.handleTermChange.bind(this)}
           />
 

@@ -52,8 +52,14 @@ class App extends Component {
       .post(`/recipes.json`, {        
         title: formValues.title,
         cook_time: formValues.cook_time,
-        description: formValues.description
-        // ingredients: ingredients
+        description: formValues.description,
+        ingredients: {
+          0: {
+            ingredients_name: formValues.ingredients_name,
+            ingredients_quantity: formValues.ingredients_quantity,
+            ingredients_unit: formValues.ingredients_unit
+          }
+        }
         // ingredients: {"name": "salt", "quantity": 2, "unit": "teaspoon"},
         // create_time: Date.now()eatable
       })
