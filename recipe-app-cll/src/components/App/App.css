@@ -150,10 +150,6 @@ h1 {
     font-family: "Kollektif";
 }
 
-.password {
-    /* margin-bottom: 20px;    */
-}
-
 .display-error {
     color: red;
     font-size: 1.6vh;
