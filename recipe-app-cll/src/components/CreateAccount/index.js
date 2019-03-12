@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import fire from "../../util/firebase";
 require("firebase/auth"); // to prevent weird bugs by firebase
 
@@ -27,8 +28,8 @@ export default class CreateAccount extends React.Component {
         /* alert("Account Created!"); */
         console.log('Account Created');
         this.setState({
-          loginStatus: true,
-          displaymsg: 'Your account has been successfully created.'
+          loginStatus: false,
+          displaymsg: 'Your account has been successfully created.  Please sign in.'
         })
       })
       .catch(error => {
@@ -84,10 +85,10 @@ export default class CreateAccount extends React.Component {
               onClick={this.createAccount}
             >
             </input>
-            {/* <button type="submit" onClick={this.createAccount}>
-              Create
-            </button> */}
           </form>
+          <div className="links">
+            <p><Link to={"../"}>Sign In</Link></p>
+          </div>
         </div>
       </div>
       </div>
