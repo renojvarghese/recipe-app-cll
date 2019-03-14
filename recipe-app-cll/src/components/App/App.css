@@ -293,6 +293,11 @@ footer {
     z-index: 15;
     transform: translate(-22px, -20px);
     transition: .25s;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
 }
 
 .menu:hover {
@@ -375,17 +380,18 @@ footer {
     width: 100%;
 }
 
-.menu-sidebar li a {
+.menu-sidebar li  {
     text-decoration: none;
+    text-decoration-color: #fff;
     color: white;
     padding-right: 45px;
     transition: all 0.6s;
 
 }
 
-.menu-sidebar a:hover,
-.menu-sidebar a:active,
-.menu-sidebar a:focus {
+.menu-sidebar li:hover,
+.menu-sidebar li:active,
+.menu-sidebar li:focus {
     color: #F8605c;
 
 }
