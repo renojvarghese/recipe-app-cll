@@ -39,7 +39,7 @@ class Recipes extends Component {
               <td>{recipe.cook_time}{" "}</td>
               <td>{recipe.description}</td>
               <td>{JSON.stringify(recipe.ingredients)}</td>            
-              <td>{this.renderIngredients(recipe.ingredients)}</td>            
+              {/* <td>{this.renderIngredients(recipe.ingredients)}</td>             */}
               <td>{recipe.instructions}</td>
               <td>{recipe.tags}</td>
             </tr>
