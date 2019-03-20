@@ -21,14 +21,12 @@ export default class LandingPage extends React.Component {
   authEmailPwd(event) {
     event.preventDefault()
     
-    //const email = this.emailInput.value
-    //const password = this.passwordInput.value
-
     console.log("Authenticate with password")
-    console.table([{
+/*    console.table([{
       email: this.emailInput.value,
       password: this.passwordInput.value,
     }])
+*/
 
     fire
       .auth()
@@ -54,14 +52,14 @@ export default class LandingPage extends React.Component {
 
   handleEmailChange = (event) => {
     this.setState({email: event.target.value}, () => {
-      console.log('Email Change');
+      // console.log('Email Change');
       this.validateEmail();
     });
   };
 
   validateEmail = () => {
     const { email } = this.state;
-    console.log('Email length: ' + email.length);
+    // console.log('Email length: ' + email.length);
     this.setState({
       emailError:
         email.length > 5 ? null : 'Email must be longer than 5 characters'
@@ -70,14 +68,14 @@ export default class LandingPage extends React.Component {
 
   handlePasswordChange = (event) => {
     this.setState({password: event.target.value}, () => {
-      console.log('Password Change');
+      // console.log('Password Change');
       this.validatePassword();
     });
   };
 
   validatePassword = () => {
     const { password } = this.state;
-    console.log('Password length: ' + password.length);
+    // console.log('Password length: ' + password.length);
     this.setState({
       passwordError:
         password.length > 5 ? null : 'Password must be longer than 5 characters'
@@ -86,7 +84,6 @@ export default class LandingPage extends React.Component {
 
     render() {
 
-      /**/
         return (
             <div>
                 <div id="container">
