@@ -21,14 +21,21 @@ export default class Dashboard extends React.Component {
         this.setState({hidden: !this.state.hidden})
     }
 
+    closeMenu = () => {
+        this.setState({
+            hidden : true,
+            clicked : false
+        })
+    }
+
     render() {
         return(
             
             <div>
                 <NavBar/>
-                <MenuBtn toggleMenu={this.toggleMenu}></MenuBtn>                 
+                <MenuBtn toggleMenu={this.toggleMenu} closeMenu={this.closeMenu} hidden={this.state.hidden}></MenuBtn>                 
                 <main>
-                <Menu hidden={ this.state.hidden } toggleMenu={this.toggleMenu}></Menu>
+                <Menu hidden={ this.state.hidden } toggleMenu={this.toggleMenu} closeMenu={this.closeMenu}></Menu>
                 <SearchButton></SearchButton>
                 <CardContainer></CardContainer>
                 </main>
