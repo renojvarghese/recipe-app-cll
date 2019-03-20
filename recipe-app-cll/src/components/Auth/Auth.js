@@ -1,11 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import fire from "../../util/firebase";
 require("firebase/auth"); // to prevent weird bugs by firebase
 
-export default class CreateAccount extends React.Component {
+// log in to the app
+class Auth extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    loginStatus: 0,
+    loginedEmail: ""
   };
 
   // update state with contents of input field
@@ -16,16 +19,23 @@ export default class CreateAccount extends React.Component {
     if (this.props.message) this.props.setMessage(""); // reset error message if there was one
   };
 
-  // create account
-  createAccount = (e, email, password) => {
+  // log in with form data
+  login = e => {
     e.preventDefault();
     fire
       .auth()
-      .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(() => {
-        alert("Account Created!");
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(u => {
+        this.setState({
+          email: "",
+          password: "",
+          loginStatus: 1,
+          loginedEmail: this.state.email
+        });
+        alert("Successful Login!");
       })
       .catch(error => {
+        // this.props.setMessage(error.message);
         console.log(error);
         alert(error);
       });
@@ -34,12 +44,8 @@ export default class CreateAccount extends React.Component {
   render() {
     return (
       <div>
-        <h1>I am the Create Account Component</h1>
-        <h2>Edit me from src/components/CreateAccount/index.js</h2>
-        <h2>Edit my styles from src/components/App/App.css</h2>
-        {/* content separator */}
-        <br />
-        <label>Create An Account :)</label>
+        <p>Login Status: {this.state.loginStatus ? "Yes" : "No"}</p>
+        <p>User: {this.state.loginStatus ? this.state.loginedEmail : ""}</p>
         <form autoComplete="off">
           <input
             value={this.state.email}
@@ -57,12 +63,13 @@ export default class CreateAccount extends React.Component {
             placeholder="Password"
           />
           <br />
-          <button type="submit" onClick={this.createAccount}>
-            Create
+          <button type="submit" onClick={e => this.login(e)}>
+            Log in
           </button>
         </form>
-        <br />
       </div>
     );
   }
 }
+
+export default Auth;
