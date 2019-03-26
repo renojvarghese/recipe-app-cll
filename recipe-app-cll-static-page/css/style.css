@@ -271,7 +271,7 @@ footer {
 }
 
 .nav {
-    display: inline-flex;
+    display: -webkit-inline-flex;
     align-items: center;
     width: 100%;
     text-align: center;

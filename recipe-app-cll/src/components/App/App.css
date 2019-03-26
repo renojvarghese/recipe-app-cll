@@ -1,5 +1,5 @@
 /* Universal Styles */
-
+/*
 @font-face {
     font-family: "Josefin Sans";
     font-style: normal;
@@ -16,29 +16,29 @@
   }
 @font-face {
     font-family: 'Kollektif';
-    src: url("./fonts/Kollektif.ttf") format('truetype');
+    src: url("../fonts/Kollektif.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 @font-face {
     font-family: 'Kollektif';
-    src: url("./fonts/Kollektif-Bold.ttf")  format('truetype');
+    src: url("../fonts/Kollektif-Bold.ttf")  format('truetype');
     font-weight: bold;
     font-style: normal;
   }
  @font-face {
     font-family: 'Kollektif';
-    src: url("./fonts/Kollektif-BoldItalic.ttf") format('truetype');
+    src: url("../fonts/Kollektif-BoldItalic.ttf") format('truetype');
     font-weight: bold;
     font-style: italic;
   }
   @font-face {
     font-family: 'Kollektif';
-    src: url("./fonts/Kollektif-Italic.ttf") format('truetype');
+    src: url("../fonts/Kollektif-Italic.ttf") format('truetype');
     font-weight: normal;
     font-style: italic;
   }
-
+*/
 html {
     font-family: "Josefin Sans", "Playfair Display", sans-serif, serif;
     font-size: 16px;
@@ -52,7 +52,7 @@ body {
     margin: 0;
 }
 
-/* Start Landing Page */
+/*Start Landing Page*/
 
 #container {
     display: flex;
@@ -64,11 +64,12 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 50%;
-    background-image: url('../LandingPage/landing-page.png');
+    /*background-image: url('../img/landing-page.png');*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+/*    justify-content: center;*/
 }
 
 h1 {
@@ -80,13 +81,13 @@ h1 {
     color: #B22230;
 }
 
-.left h2 {
+h2 {
     padding-top: 10px;
     padding-right: 150px;
     padding-bottom: 10px;
     padding-left: 150px;
     font-family: "Kollektif";
-    font-size: 2.0vh;
+    font-size: 2.3vh;
     font-style: normal;
     color: white;
 }
@@ -114,6 +115,10 @@ h1 {
     width: 100%;
 }
 
+.password {
+    padding-bottom: 20px;
+}
+
 .right a {
     text-decoration: none;
     color: #B22230;
@@ -125,39 +130,22 @@ h1 {
     color: #F8605c;
 }
 
-.right h2 {
-    color: #B22230;  
-    margin-bottom: 20px;
-    font-family: "Josefin Sans";
+.email input {
+    padding: 8px 25px 8px 25px;
+    margin: 10px;
+    width: 50%;
 }
 
-.right h4 {
-    /* color: #B22230; */
-    margin-bottom: 20px;
-    color:  #3C1D30;    
-    font-family: "Kollektif";
-    font-style: italic;
-}
-
-.email, .password {
+.password input {
     padding: 8px 25px 8px 25px;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     width: 50%;
-    border-radius: 10px 10px;
-    border-style: solid;
-    border-color: #e0dddd;
-    font-family: "Kollektif";
-}
-
-.display-error {
-    color: red;
-    font-size: 1.6vh;
+    border-radius: 2px none;
 }
 
 .signin-btn {
     padding: 5px 60px;
-    margin-top: 20px;
     margin-bottom: 20px;
     background-color: #B22230;
     color: white;
@@ -165,7 +153,6 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.5s;
-    font-family: "Kollektif";
 }
 
 .signin-btn:hover {
@@ -176,11 +163,9 @@ h1 {
 
 .links {
     padding-top: 20px;
-    padding-bottom: 20px;
     border-top: 3px solid #F8605c;
-    width: 75%;
+    width: 100%;
     text-align: center;
-    line-height: 30px;
 }
 
 .links a {
@@ -191,17 +176,11 @@ h1 {
     color: #F8605c;
 }
 
-.link1 {
-    padding-bottom: 10px;
-}
-
 footer {
-    position: absolute;
-    bottom: 8px;
+    position: relative;
 }
 
-/* End Landing Page */
-
+/*end landing page*/
 /*Create Account*/
 
 #container2 {
@@ -280,57 +259,59 @@ footer {
 
 .nav-bar {
     position: fixed;
-    width: 100%;
     text-align: center;
     background-color: rgba(248, 96, 92);
     transition: all 0.2s ease-in-out;
     z-index: 13;
+    display: inline-block;
+    width: 100%;
+    height:60px;
 }
 
-.nav-bar.nav-active {
+.nav-bar .nav-active {
     background-color: rgba(248, 96, 92, 0.6);
 }
 
-.nav {
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    justify-content: space-between;
+.nav-bar h2 {
+    color: white;
+    margin-top:auto;
 }
 
-.nav h2 {
-    color: white;
-    margin-top: 0px;
+.icon {
+    padding: 30px;
+    float: left;
+    clear: both;
 }
 
 .menu {
     margin-top: 5px;
-    align-self: flex-start;
-    flex: 1;
-    justify-self: center;
     color: white;
-}
-
-.toggle-button {
     position: fixed;
-    width: 44px;
-    height: 40px;
-    margin-left: 20px;
+    width: 25px;
+    height: 20px;
     transition: .25s;
     z-index: 15;
     transform: translate(-22px, -20px);
     transition: .25s;
+    list-style-type: none;
 }
 
-.toggle-button:hover {
+.menu a {
+    text-decoration: none;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.togggle-button:hover {
     cursor: pointer;
 }
 
 .toggle-button .menu-bar {
-    position: absolute;
+    position: fixed;
     border-radius: 2px;
-    width: 80%;
+    width: 100%;
     transition: .5s;
 }
 
@@ -374,7 +355,7 @@ footer {
     background-color: #8DA05E;
     position: fixed;
     top: 0;
-    margin-top: 80px;
+    margin-top: 60px;
     height: 100%;
     width: 280px;
     margin-left: -280px;
@@ -399,17 +380,18 @@ footer {
     width: 100%;
 }
 
-.menu-sidebar a {
+.menu-sidebar li  {
     text-decoration: none;
+    text-decoration-color: #fff;
     color: white;
     padding-right: 45px;
-
+    transition: all 0.6s;
 
 }
 
-.menu-sidebar a:hover,
-.menu-sidebar a:active,
-.menu-sidebar a:focus {
+.menu-sidebar li:hover,
+.menu-sidebar li:active,
+.menu-sidebar li:focus {
     color: #F8605c;
 
 }
@@ -421,7 +403,7 @@ footer {
 
 
 .add {
-    margin: 20px;
+    margin: -30px 20px 20px 20px;
     padding: 10px;
     color: white;
     background-color: #B22230;
@@ -429,6 +411,8 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
+    float: right;
+    clear: both;
 }
 
 .add:hover {
@@ -440,11 +424,11 @@ footer {
 main {
     background-color: #FEDDCC;
     height: 100vh;
-    padding-top: 200px;
+    padding-top: 400px;
     text-align: center;
     align-items: center;
 }
-
+/*
 .slide-container {
     width: 1200px;
     height: 800px;
@@ -468,6 +452,7 @@ main {
 .carousel-control.left {
     background: transparent !important;
 }
+*/
 
 section {
     height: 100vh;
@@ -609,12 +594,25 @@ section {
 
 /*DashBoard Media Queries*/
 @media(max-width: 768px) {
+
+    .nav-bar h2 {
+        display: none;
+    }
+
+    .nav-bar .add {
+        margin-top: 10px;
+    }
+
     .slide-container {
         display: none;
     }
 
+    main {
+        height: 100%;
+    }
+
     .search {
-        margin-top: 5px;
+        margin-top: -250px;
     }
 
     .nav h2 {

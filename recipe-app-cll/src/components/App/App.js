@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import "./App.css";
-// import fire from "../../util/firebase";
+import fire from "../../util/firebase";
 import axios from "../../util/axios";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,11 +14,22 @@ import AppRouter from "../AppRouter";
 
 class App extends Component {
   state = {
-    recipes: [
-      { id: 1, name: "Omelet" },
-      { id: 2, name: "Egg Benedict" },
-      { id: 3, name: "Christmas Tree" },
-      { id: 4, name: "ABC" }
+    recipes: [{
+        id: 1,
+        name: "Omelet"
+      },
+      {
+        id: 2,
+        name: "Egg Benedict"
+      },
+      {
+        id: 3,
+        name: "Christmas Tree"
+      },
+      {
+        id: 4,
+        name: "ABC"
+      }
     ]
   };
 
@@ -49,10 +62,10 @@ class App extends Component {
   addRecipes(name) {
     axios
       .post(`/recipes.json`, {
-        recipe: name
-        // ingredients: ["egg", "pan"],
-        // description: "pan can cake",
-        // create_time: Date.now()
+        recipe: name,
+        ingredients: ["egg", "pan"],
+        description: "pan can cake",
+        create_time: Date.now()
       })
       .then(response => {
         console.log(response.data);
@@ -68,8 +81,10 @@ class App extends Component {
   }
 
   render() {
-    const { recipes } = this.state;
-    return (
+    const {
+      recipes
+    } = this.state;
+    return ( 
       <div>
         <AppRouter />
         <Recipes recipes={recipes} onDelete={this.deleteRecipe.bind(this)} />

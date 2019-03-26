@@ -2,11 +2,15 @@
 	"folders": [
 		{
 			"path": "Recipe App CLL Static Page"
+		},
+		{
+			"path": "recipe-app-cll"
 		}
 	],
 	"settings": {
 		"editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
 		"editor.fontSize": 14,
-		"editor.fontWeight": "400"
+		"editor.fontWeight": "400",
+		"liveServer.settings.multiRootWorkspaceName": "Recipe App CLL Static Page"
 	}
 }
