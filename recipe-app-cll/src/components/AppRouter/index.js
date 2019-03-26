@@ -14,7 +14,7 @@ const routesArr = [
     },
     {
         component: CreateAccount,
-        path:"/create-account",
+        path:"/CreateAccount",
         exact: true
     },
     {
