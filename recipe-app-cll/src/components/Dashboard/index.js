@@ -5,13 +5,21 @@ import CardContainer from "./containers/CardContainer";
 import SearchButton from "./components/SearchButton";
 import MenuBtn from "./components/MenuBtn";
 
+import axios from "../../util/axios";
+
 
 
 export default class Dashboard extends React.Component {
 
     state = {
         hidden: true, //menu
-        clicked: false //button
+        clicked: false, //button
+        recipes: [
+            { id: 1, title: "Omelet" },
+            { id: 2, title: "Egg Benedict" },
+            { id: 3, title: "Christmas Tree" },
+            { id: 4, title: "ABC" }
+        ]
     }
     constructor(props) {
         super(props);
@@ -28,7 +36,41 @@ export default class Dashboard extends React.Component {
         })
     }
 
+    componentWillMount() {
+        this.getRecipes();
+    }
+
+    getRecipes = () => {
+        axios
+          .get(`/recipes.json`)
+          .then(res => {
+            console.log(`Getting recipes...`);
+            const recipes = [];
+            for (let key in res.data) {
+              recipes.push({
+                ...res.data[key],
+                id: key
+              });
+            }
+            console.log(recipes);
+            this.setState({
+              recipes: recipes
+            });
+          })
+          .catch(err => {
+            console.log(err);
+          });
+    };
+
+    deleteRecipe(id) {
+        axios.delete(`/recipes/${id}.json`).then(res => {
+          console.log(res);
+          this.getRecipes();
+        });
+    }
+
     render() {
+        const { recipes } = this.state;
         return(
             
             <div>
@@ -37,7 +79,7 @@ export default class Dashboard extends React.Component {
                 <main>
                 <Menu hidden={ this.state.hidden } toggleMenu={this.toggleMenu} closeMenu={this.closeMenu}></Menu>
                 <SearchButton></SearchButton>
-                <CardContainer></CardContainer>
+                <CardContainer recipes={recipes} onDelete={this.deleteRecipe.bind(this)}></CardContainer>
                 </main>
             </div>
         )
