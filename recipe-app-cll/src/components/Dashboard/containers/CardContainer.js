@@ -8,10 +8,9 @@ export class Cards extends Component {
     render() {
         return (
             <div className="card-container">
-                <CardItem></CardItem>
-                <CardItem></CardItem>
-                <CardItem></CardItem>
-                <CardItem></CardItem>
+                {this.props.recipes.map(recipe => (
+                    <CardItem recipe={recipe}></CardItem>
+                ))}                
             </div>
         )
     }    

@@ -5,13 +5,15 @@ import { Card, CardImg, CardText, CardBody,
 
 export class CardItem extends Component {
     render(){
+        const { recipe } = this.props;
         return (
             <div className="card">
             <img src={CardImage} alt="Card image cap"></img>
             <div className={CardBody}>
-                <h5 className={CardTitle}>Card title</h5>
-                <p className={CardSubtitle}>Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</p>
+                <h5 className={CardTitle}>{recipe.title}</h5>
+                <p className={CardSubtitle}>{recipe.description}</p>
+                <p>Cooktime: {recipe.cook_time}</p>
+                <p>Ingredients: {JSON.stringify(recipe.ingredients)}</p>
                 <a href="#" className="toggle-recipe">Click to View</a>
             </div>
         </div>
