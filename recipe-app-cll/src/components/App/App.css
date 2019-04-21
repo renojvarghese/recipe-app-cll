@@ -573,6 +573,7 @@ section {
 
 .expanded {
     height: 30rem;
+    transition: all 0.4s;
 }
 
 .expanded .recipe-contents {
@@ -581,6 +582,7 @@ section {
 
 .expanded button {
     margin-top: .5em;
+    transition: all 0.4s;
 }
 
 
