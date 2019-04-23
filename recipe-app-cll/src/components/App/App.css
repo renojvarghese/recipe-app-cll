@@ -505,10 +505,13 @@ section {
     border: 4px solid #F8605c;
     border-radius: 5px;
     color: #fff;
-    height: auto;
+
+    height: 11rem;
     width: 400px;
     padding: 20px;
     margin: 20px;
+    transition: all 0.3s;
+
 }
 
 .card img {
@@ -521,7 +524,9 @@ section {
     padding-bottom: 10px;
 }
 
-.card a {
+
+.card button {
+
     color: white;
     background-color: #B22230;
     border: 2px solid #B22230;
@@ -529,15 +534,64 @@ section {
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.2s;
+
+    cursor: pointer;
 }
 
-.card a:hover,
-.card a:active,
-.card a:focus {
+.card button:hover,
+.card button:active,
+.card button:focus {
+
     background-color: #F8605c;
     text-decoration: none;
     color: #fff;
 }
+
+
+
+@keyframes showLabels {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card .recipe-contents {
+    display: none;
+}
+
+ .recipe-contents {
+    background-color: #8DA05E;
+    flex-direction: column;
+    color: #333;
+    margin-top: 1.3em;
+    transition: all 0.4s;
+    animation: showLabels 2s;
+}
+
+.recipe-contents label {
+    margin: .5em;
+    background-color: #f4f4f4;
+    border-radius: 1em;
+    padding: .4em;
+}
+
+.expanded {
+    height: 30rem;
+    transition: all 0.4s;
+}
+
+.expanded .recipe-contents {
+    display: flex;
+}
+
+.expanded button {
+    margin-top: .5em;
+    transition: all 0.4s;
+}
+
 
 
 /*end dashboard*/
