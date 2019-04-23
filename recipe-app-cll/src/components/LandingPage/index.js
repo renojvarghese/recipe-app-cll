@@ -42,6 +42,7 @@ export default class LandingPage extends React.Component {
           user: fire.auth().currentUser
         });
         console.log(`Login successful with ${this.emailInput.value}`);
+        console.log(`User Id: ${this.state.user.uid}`);
         localStorage.setItem('user', this.state.user.uid);
         this.props.history.push("/Dashboard");
       })
