@@ -14,16 +14,14 @@ export default class LandingPage extends React.Component {
         loginStatus: false,
         loginEmail: "",
         emailError: "",
-        passwordError: "",
-        user: null
+        passwordError: ""
       }
-
     }
   
   authEmailPwd(event) {
     event.preventDefault()
     
-    console.log("Authenticated with password")
+    console.log("Authenticate with password")
 /*    console.table([{
       email: this.emailInput.value,
       password: this.passwordInput.value,
@@ -38,23 +36,17 @@ export default class LandingPage extends React.Component {
           email: "",
           password: "",
           loginStatus: true,
-          loginEmail: this.emailInput.value,
-          user: fire.auth().currentUser
+          loginEmail: this.emailInput.value
         });
         console.log(`Login successful with ${this.emailInput.value}`);
-        console.log(`User Id: ${this.state.user.uid}`);
-        localStorage.setItem('user', this.state.user.uid);
         this.props.history.push("/Dashboard");
       })
       .catch(error => {
         this.setState({
           loginStatus: false,
-          passwordError: error.message,
-          user: null
+          passwordError: error.message
         });
         console.log(error);
-        localStorage.removeItem('user');
-        console.log('User not signed in');
       });
   };
 
@@ -90,7 +82,6 @@ export default class LandingPage extends React.Component {
     });
   }
 
-  
     render() {
 
         return (
@@ -107,8 +98,8 @@ export default class LandingPage extends React.Component {
                   <div className="right">
                     <form onSubmit={(event) => this.authEmailPwd(event)}>
                       <div>
+                        { /* autofocus removed */ }
                         <input 
-                          autoComplete="off"
                           className="email" 
                           name="email" 
                           type="email" 
